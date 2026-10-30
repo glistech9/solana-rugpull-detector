@@ -1,0 +1,1 @@
+# solana-rugpull-detector
