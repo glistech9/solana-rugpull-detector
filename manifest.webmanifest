@@ -1,0 +1,19 @@
+{
+  "name": "Solana Rugpull Detector",
+  "short_name": "Rugpull Radar",
+  "description": "Solana memecoin risk scanner",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080e19",
+  "theme_color": "#0b1220",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

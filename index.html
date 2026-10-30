@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Pemindai risiko token Solana berbasis data publik DexScreener dan RugCheck.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Solana Rugpull Detector</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="brand-icon">⌁</div><div><strong>RUGPULL<span>RADAR</span></strong><small>SOLANA TOKEN FORENSICS</small></div></div>
+    <div class="live"><i></i> PUBLIC DATA</div>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">ON-CHAIN RISK SCANNER / SOLANA</p>
+      <h1>Periksa token.<br><em>Jangan percaya hype.</em></h1>
+      <p class="sub">Analisis risiko awal dari data pasar DexScreener dan laporan on-chain RugCheck.</p>
+      <form id="scan-form" class="scanbox">
+        <label for="mint">TOKEN MINT ADDRESS (CA)</label>
+        <div class="inputrow"><input id="mint" name="mint" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Tempel contract address Solana..." required><button id="scan-btn" type="submit">SCAN <span>↗</span></button></div>
+        <div class="hint">Hanya alamat mint Solana. Jangan pernah masukkan seed phrase atau private key.</div>
+      </form>
+      <div class="quicklinks"><a href="https://rugcheck.xyz/" target="_blank" rel="noreferrer">RugCheck ↗</a><a href="https://dexscreener.com/solana" target="_blank" rel="noreferrer">DexScreener ↗</a><a href="https://solscan.io/" target="_blank" rel="noreferrer">Solscan ↗</a></div>
+    </section>
+    <section id="status" class="status hidden" aria-live="polite"></section>
+    <section id="results" class="results hidden"></section>
+    <section class="method">
+      <div><span class="eyebrow">METODOLOGI</span><h2>Evidence first.</h2><p>Data yang tidak tersedia ditandai sebagai tidak diketahui, bukan dianggap aman. Skor RugCheck ditampilkan terpisah dari indikator pasar.</p></div>
+      <div class="method-grid"><div><b>01 / CONTRACT</b><p>Mint & freeze authority, token program, metadata, risk flags.</p></div><div><b>02 / LIQUIDITY</b><p>Likuiditas pasar, LP lock yang dilaporkan, pool dan holder.</p></div><div><b>03 / BEHAVIOR</b><p>Insider networks dan aktivitas buy/sell yang tersedia.</p></div><div><b>04 / MARKET</b><p>Market cap/FDV, volume, umur pool dan konsentrasi holder.</p></div></div>
+    </section>
+    <footer><span>RUGPULL RADAR · BETA</span><span>Not financial advice · Data snapshot only</span></footer>
+  </main>
+  <script src="/app.js" defer></script>
+  <script>if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));</script>
+</body>
+</html>
